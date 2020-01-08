@@ -22,11 +22,12 @@ from framework.util import Util, AlchemyEncoder
 from system.logic import SystemLogic
             
 # 패키지
+package_name = __name__.split('.')[0]
+logger = get_logger(package_name)
 from logic import Logic
 from model import ModelSetting
 
-package_name = __name__.split('.')[0].split('_sjva')[0]
-logger = get_logger(package_name)
+
 
 blueprint = Blueprint(package_name, package_name, url_prefix='/%s' %  package_name, template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
 
@@ -43,7 +44,7 @@ plugin_info = {
     'icon' : '',
     'developer' : 'soju6jan',
     'description' : 'Tautulli 런처<br><a href="https://tautulli.com" target="_blank">Tautulli 홈페이지</a>',
-    'home' : 'https://github.com/soju6jan/launcher_tautulli_sjva',
+    'home' : 'https://github.com/soju6jan/launcher_tautulli',
     'more' : '',
 }
 #########################################################
