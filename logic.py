@@ -170,7 +170,7 @@ class Logic(object):
                         shutil.rmtree(target)
                 commands = [
                     ['msg', u'잠시만 기다려주세요.'],
-                    ['git', 'clone', 'https://github.com/Tautulli/Tautulli.git', target],
+                    ['git', 'clone', 'https://github.com/Tautulli/Tautulli.git', target, '--depth', '1'],
                     ['msg', u'설치가 완료되었습니다.']
                 ]
                 system.SystemLogicCommand.start('설치', commands)
