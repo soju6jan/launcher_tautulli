@@ -24,8 +24,8 @@ from system.logic import SystemLogic
 # 패키지
 package_name = __name__.split('.')[0]
 logger = get_logger(package_name)
-from logic import Logic
-from model import ModelSetting
+from .logic import Logic
+from .model import ModelSetting
 
 
 
@@ -39,11 +39,11 @@ def plugin_unload():
 
 plugin_info = {
     'version' : '0.1.0.0',
-    'name' : 'Calibre-web',
+    'name' : u'Tautulli',
     'category_name' : 'launcher',
     'icon' : '',
     'developer' : 'soju6jan',
-    'description' : 'Tautulli 런처<br><a href="https://tautulli.com" target="_blank">Tautulli 홈페이지</a>',
+    'description' : u'Tautulli 런처<br><a href="https://tautulli.com" target="_blank">Tautulli 홈페이지</a>',
     'home' : 'https://github.com/soju6jan/launcher_tautulli',
     'more' : '',
 }
@@ -51,9 +51,9 @@ plugin_info = {
 
 # 메뉴 구성.
 menu = {
-    'main' : [package_name, 'Tautulli'],
+    'main' : [package_name, u'Tautulli'],
     'sub' : [
-        ['setting', '설정'], ['log', '로그']
+        ['setting', u'설정'], ['log', u'로그']
     ], 
     'category' : 'launcher',
 }  
